@@ -5,9 +5,11 @@
 const express = require("express")
 // yaha require isliye kiye quki hme api create krni thi or use mongodb  me save krni thi isliye 
 const noteModel = require("./models/notes.model.js")
+const cors = require("cors")
 
 const app = express();
 app.use(express.json()); //middleware
+app.use(cors());
 
 // POST /api/notes
 // create new note and save data in mongodb
